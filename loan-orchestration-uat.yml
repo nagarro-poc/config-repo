@@ -10,16 +10,17 @@ management:
       exposure:
         include: "*"
 spring:
-    cloud:
-      vault:
-        kv:
-          enabled: true
-          application-name: loan-orchestration
-        authentication: TOKEN
-        token: vOU1OCs0IDS6pjr6xGKgkq9AVWhCrs4fo5dVvuK3UDk
-        scheme: http
-        # host: vault
-        # port: 8200
-        uri: http://vault:8200
-      config:
-        import: vault://
+  config:
+    import: vault://
+  cloud:
+    vault:
+      kv:
+        enabled: true
+        application-name: loan-orchestration
+      authentication: TOKEN
+      token: vOU1OCs0IDS6pjr6xGKgkq9AVWhCrs4fo5dVvuK3UDk
+      scheme: http
+      # host: vault
+      # port: 8200
+      uri: http://vault:8200
+  
